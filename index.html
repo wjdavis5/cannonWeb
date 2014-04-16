@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-		<title>Cannon For District 71 Rep.</title>
+		<title>Cannon For District 71 State Rep.</title>
 		<meta name="description" content="" />
 		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
 
@@ -30,7 +30,7 @@
 		<link href="assets/css/superslides.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/owl.carousel.css" rel="stylesheet" type="text/css" />
 		<link href="assets/plugins/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css" />
-
+		<link href="assets/plugins/toastr-2.0.1/toastr.min.css" rel="stylesheet" type="text/css" />
 		<!-- CSS TEMPLATE -->
 		<link href="assets/css/reset.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/framework.css" rel="stylesheet" type="text/css" />
@@ -144,6 +144,7 @@
 							<div class="inner">
 								<h2 class="bigtext strtoupper nomargin">James W Cannon III</h2>
 								<p>District 71 Candidate</p>
+								<p>State Rep.</p>
 							</div>
 							<hr /><hr />
 						</div>
@@ -223,8 +224,13 @@
 		<section class="cover" style="background-image:url('assets/images/preview/slider/3.jpg')">
 			<span class="overlay"></span>
 			<div class="container text-center" data-animation="bounceIn">
-				<q>The Constitution is not an instrument for the government to restrain the people, it is an instrument for the people to restrain the government - lest it come to dominate our lives and interests.</q>
-				<cite>Patrick Henry</cite>
+				<table>
+					<tr>
+						<td><img src="assets/images/asu2.jpg" style="width:281px;height:422px"/></td>
+						<td><q>The Constitution is not an instrument for the government to restrain the people, it is an instrument for the people to restrain the government - lest it come to dominate our lives and interests.</q>
+						<cite>Patrick Henry</cite></td>
+					</tr>
+				</table>
 			</div>
 		</section>
 		<!-- /QUOTE -->
@@ -522,6 +528,7 @@
 
 
 		<!-- CORE FILES -->
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
@@ -535,7 +542,7 @@
 		<script type="text/javascript" src="assets/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
 		<script type="text/javascript" src="assets/plugins/jquery.mb.YTPlayer.js"></script><!-- Youtube video background -->
 		<script type="text/javascript" src="assets/plugins/holder.js"></script><!-- delete on production -->
-		
+		<script type="text/javascript" src="assets/plugins/toastr-2.0.1/toastr.min.js"></script>
 		<!-- js scripts -->
 		<script async type="text/javascript" src="assets/js/scripts.js"></script>
 
@@ -551,6 +558,39 @@
 		
 		</script>
 		
+		<script type="text/javascript">
+		
+		var showToast = function() {
+			
+			setInterval(function(){
+							toastr.info("<div><a href='https://www.facebook.com/Cannon4Ohio' target='_new'><img height='30' width='30' src='assets/images/facebook.jpg'/><b>Follow us on Facebook to stay up to date on the campaign!</b></a></div>", "Find Us On Facebook!");
+						},15000);
+		};
+			$(document).ready(
+				function() {
+					
+					setTimeout(function(){
+						toastr.info("<div><a href='https://www.facebook.com/Cannon4Ohio' target='_new'><img height='30' width='30' src='assets/images/facebook.jpg'/><b>Follow us on Facebook to stay up to date on the campaign!</b></a></div>", "Find Us On Facebook!");
+						showToast();
+					},5000);
+				
+				toastr.options = {
+								  "closeButton": true,
+								  "debug": false,
+								  "positionClass": "toast-top-full-width",
+								  "showDuration": "300",
+								  "hideDuration": "1000",
+								  "timeOut": "5000",
+								  "extendedTimeOut": "1000",
+								  "showEasing": "swing",
+								  "hideEasing": "linear",
+								  "showMethod": "fadeIn",
+								  "hideMethod": "fadeOut"
+							};
+						
+				}
+			);
+		</script>
 		
 
 	</body>
